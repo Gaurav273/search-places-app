@@ -1,42 +1,99 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  font-size: 16px;
+  color: rgb(33, 37, 41);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 20px 40px 0px 70px;
+  min-height: 100vh;
+}
+.search-input {
+  width: 241px;
+  height: 38px;
+  font-size: 16px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(206, 212, 218);
+  justify-content: flex-start; /* Align search input to the left */
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.search-input:focus {
+  border-color: #7952b3;
+  box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.25);
+  outline: none;
+}
+
+.search-input:disabled {
+  background-color: rgb(233, 236, 239);
+  cursor: not-allowed;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.custom-table thead th {
+  font-weight: 700;
+  text-align: left;
+  padding: 8px;
+  border-bottom: 3px solid rgb(33, 37, 41); /* Dark bold line below header */
+}
+
+.custom-table tbody td {
+  padding: 8px;
+  border-bottom: 1px solid rgb(222, 226, 230); /* Keep horizontal lines */
+}
+
+.custom-table th,
+.custom-table td {
+  border-left: none;
+  border-right: none;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+.pagination-button {
+  padding: 5px 10px;
+  border: 1px solid rgb(206, 212, 218);
+  cursor: pointer;
+  border-radius: 4px;
+}
+.pagination-button:disabled {
+  background-color: rgb(233, 236, 239);
+  cursor: not-allowed;
+}
+
+.items-per-page {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.items-per-page input {
+  width: 50px;
+  padding: 4px;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  border: 1px solid rgb(206, 212, 218);
+  border-radius: 4px;
 }
